@@ -1,0 +1,64 @@
+{
+  "name": "novel_chart",
+  "productName": "Novel Chart",
+  "version": "1.0.0",
+  "description": "Draw emotional arcs from novel outlines",
+  "homepage": "https://github.com/Siipis/NovelChart",
+  "private": true,
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package --platform=win32 --arch=x64",
+    "make": "electron-forge make --platform=win32 --arch=x64",
+    "publish": "cp \"out/make/squirrel.windows/x64/Novel Chart-1.0.0 Setup.exe\" installer\n",
+    "lint": "echo \"No linting configured\"",
+    "rebuild": "./node_modules/.bin/electron-rebuild.cmd"
+  },
+  "keywords": [],
+  "author": "Novel Chart",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "src/icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "novel_chart"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-winstaller": "^4.0.0",
+    "windows-1252": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.45",
+    "@electron-forge/maker-deb": "^6.0.0-beta.45",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.45",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.45",
+    "@electron-forge/maker-zip": "^6.0.0-beta.45",
+    "electron": "5.0.6",
+    "electron-rebuild": "^1.8.8"
+  }
+}
