@@ -2,7 +2,7 @@
 This is a lightweight desktop app that allows you to visualize novels as emotional arcs, inspired by [the Hedonometer](http://hedonometer.org/about.html).
 
 ## Installation
-Download the latest release from the [installs folder](installs).
+Download the latest release [here](https://code.varjohovi.net/novelChart/NovelChart.exe).
 
 Run the exe and wait for the installer to finish. 
 
